@@ -44,7 +44,7 @@
         android:supportsRtl="true" >
         <meta-data
             android:name="LEMON_APPKEY"
-            android:value="ec8b570ad4bd403783c52ecb5cdfa849" />
+            android:value="应用key" />
         <meta-data
             android:name="LEMON_PLAYKEY"
             android:value="4JRKyMthe" />
@@ -53,7 +53,7 @@
             android:value="57958b17e0f55adb4e000711" />
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="ym" />
+            android:value="渠道key" />
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
             android:value="e50c78a878514b7fcc4c2779814b5764" />
