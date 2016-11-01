@@ -99,10 +99,8 @@
             android:name="com.lemon95.lemonvideolib.user.view.PurchaseActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
-
                 <!-- 视频记录页 -->
                 <action android:name="LOG_ACTION" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -120,10 +118,8 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
             <intent-filter>
-
                 <!-- 私人定制 -->
                 <action android:name="CUSTOM_ACTION" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -142,7 +138,6 @@
             android:name="com.lemon95.lemonvideolib.customization.view.LoginPromptActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
-
                 <!-- 登录 -->
                 <action android:name="LOGIN_PROMPT" />
 
