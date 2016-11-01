@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/lemon_sousuo_search_record_ll_lishi"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@color/lemon_white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="@dimen/lemon_private_search_tv_width"
+            android:layout_height="@dimen/lemon_private_search_tv_height"
+            android:layout_marginLeft="@dimen/lemon_private_search_tv_left"
+            android:layout_marginTop="20dp"
+            android:background="@color/lemon_anniu_resuo_back"
+            android:gravity="center"
+            android:text="历史记录"
+            android:textColor="@color/lemon_white"
+            android:textSize="@dimen/lemon_private_search_tv_size"/>
+
+        <ImageView
+            android:id="@+id/lemon_search_record_iv_shanchu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/lemon_search_record_shanchu"/>
+
+
+    </RelativeLayout>
+
+    <View
+        style="@style/lemon_line"
+        android:layout_marginLeft="@dimen/lemon_private_search_tv_left"
+        android:layout_marginRight="@dimen/lemon_private_search_tv_left"
+        android:layout_marginTop="@dimen/lemon_private_search_tv_left_top"></View>
+
+    <com.lemon95.lemonvideolib.common.myview.MyGridView
+        android:id="@+id/lemon_record_ll_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/lemon_private_search_tv_left_bottom"
+        android:layout_marginLeft="@dimen/lemon_private_search_tv_left"
+        android:layout_marginRight="@dimen/lemon_private_search_tv_left"
+        android:layout_marginTop="@dimen/lemon_private_search_tv_height"
+        android:fadingEdge="none"
+        android:horizontalSpacing="16dp"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="2"
+        android:scrollbars="none"
+        android:verticalSpacing="10dp"/>
+
+    <ImageView
+        android:id="@+id/lemon_search_record_iv_xiala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/lemon_search_record_xiala"/>
+</LinearLayout>

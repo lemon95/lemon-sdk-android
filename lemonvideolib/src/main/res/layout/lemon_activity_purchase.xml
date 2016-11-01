@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lemon_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/lemon_common_top_rig_img"></include>
+
+    <include
+        layout="@layout/lemon_common_load_ma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <View style="@style/lemon_line"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<RelativeLayout-->
+                <!--android:visibility="gone"-->
+                <!--android:id="@+id/lemon_rl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="75dp"-->
+                <!--android:background="@color/lemon_white"-->
+                <!-->-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/lemon_civ_portrait"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:src="@drawable/lemon_default_avatar"-->
+                    <!--/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="20dp"-->
+                    <!--android:layout_toRightOf="@id/lemon_civ_portrait"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/lemon_purchase_tv_name"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="姓名"-->
+                        <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/lemon_purchase_tv_denglu"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:text="登录后享更多特权"-->
+                        <!--/>-->
+                <!--</LinearLayout>-->
+
+
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/lemon_message_rl_entrance"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="20dp">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerInParent="true"-->
+                        <!--android:src="@drawable/lemon_set_xiaoxi"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/lemon_purchase_tv_message_number"-->
+                        <!--android:layout_width="14dp"-->
+                        <!--android:layout_height="14dp"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:background="@drawable/lemon_purchase_xiaoxi_bg"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="11"-->
+                        <!--android:textColor="@color/lemon_white"-->
+                        <!--android:textSize="10sp"-->
+                        <!--android:visibility="gone"/>-->
+                <!--</RelativeLayout>-->
+            <!--</RelativeLayout>-->
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_video_recording_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_watch"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_watch_the_record"
+                    android:text="@string/lemon_watch_the_record"
+
+                    />
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/lemon_hs_watch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lemon_white"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/lemon_watch_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="none"
+                        android:fastScrollEnabled="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:horizontalSpacing="12dp"
+                        android:overScrollMode="never"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/lemon_line"></View>
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_video_recording_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_dingzhijilu"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_share_dingzhi"
+                    android:text="@string/lemon_records_custom"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View style="@style/lemon_line"></View>
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_video_recording_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_shoucang"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_watch_the_shoucang"
+                    android:text="@string/lemon_collect_record"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/lemon_hs_collect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lemon_white"
+                android:fadingEdge="none"
+                android:focusable="false"
+                android:overScrollMode="never"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <GridView
+                        android:id="@+id/lemon_collect_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadingEdge="none"
+                        android:fastScrollEnabled="false"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:horizontalSpacing="12dp"
+                        android:overScrollMode="never"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/lemon_line"></View>
+
+
+            <!--<View-->
+                <!--style="@style/lemon_line"-->
+                <!--android:layout_marginTop="@dimen/lemon_video_recording_top"-->
+                <!--android:visibility="visible"></View>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lemon_watch_the_record_share"-->
+                <!--style="@style/lemon_record_rl_line"-->
+                <!--android:visibility="visible">-->
+
+                <!--<TextView-->
+                    <!--style="@style/lemon_watch_the_record_TextView"-->
+                    <!--android:drawableLeft="@drawable/lemon_watch_the_fenxiang"-->
+                    <!--android:text="分享"/>-->
+
+                <!--<ImageView style="@style/lemon_watch_the_record_right"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<View-->
+                <!--style="@style/lemon_line"-->
+                <!--></View>-->
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_video_recording_top"
+                android:visibility="visible"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_setting"
+                style="@style/lemon_record_rl_line"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_watch_the_shezhi"
+                    android:text="设置"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginBottom="@dimen/lemon_video_recording_top"
+                ></View>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/lemon_livetv_player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.starschina.media.ThinkoPlayerView
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/lemon_livetv_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/sdk_media_controller_panel"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/venvy_video_sdk_panel_height"-->
+            <!--android:gravity="center_horizontal|center"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="gone">-->
+
+            <LinearLayout
+                android:id="@+id/title_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/lemon_msg_bg2"
+                android:gravity="center_horizontal|center"
+                android:orientation="horizontal">
+                <!-- 返回按钮 -->
+
+                <ImageButton
+                    android:id="@+id/lemon_back_img_btn"
+                    style="@style/venvy_media_controller_back_style"
+                    android:layout_alignParentLeft="true"
+                    android:background="@null" />
+
+                <!-- 视频标题 -->
+                <TextView
+                    android:id="@+id/lemon_video_title"
+                    style="@style/venvy_media_controller_title_style"
+                    android:maxLength="30"
+                    android:visibility="visible"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="4dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/lemon_current_time"
+                    style="@style/venvy_media_controller_title_style"
+                    android:layout_width="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/lemon_msg_bg2"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp">
+
+                <ImageButton
+                    android:id="@+id/lemon_pause_img_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@null"
+                    android:src="@drawable/venvy_sdk_media_controller_pause_bg" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/lemon_lock"
+                style="@style/venvy_media_controller_lock_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/lemon_msg_bg"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/lemon_volume_brightness"
+            layout="@layout/venvy_video_media_controller_brightness_volumn_sdk"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/lemon_show_popup_view"
+            style="@style/venvy_media_controller_popup_text_style"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

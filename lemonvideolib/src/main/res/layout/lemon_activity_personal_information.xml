@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/lemon_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/lemon_common_top_compile"></include>
+
+    <View
+        style="@style/lemon_line"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lemon_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="头像"
+            android:textColor="@color/lemon_camera_bg"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/lemon_personal_information_portrait"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/lemon_default_avatar"/>
+    </RelativeLayout>
+
+    <View style="@style/lemon_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lemon_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="姓名"
+            android:textColor="@color/lemon_camera_bg"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/lemon_personal_information_ed_realname"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lemon_white"
+            android:gravity="right"
+            android:lines="1"
+            android:maxLength="6"
+            android:textColor="@color/lemon_movie_msg"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <View style="@style/lemon_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lemon_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="昵称"
+            android:textColor="@color/lemon_camera_bg"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/lemon_personal_information_ed_nickname"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lemon_white"
+            android:gravity="right"
+            android:lines="1"
+            android:maxLength="8"
+            android:textColor="@color/lemon_movie_msg"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <View style="@style/lemon_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lemon_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="生日"
+            android:textColor="@color/lemon_camera_bg"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/lemon_personal_information_ed_birthday"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lemon_white"
+            android:gravity="right"
+            android:maxLength="10"
+            android:textColor="@color/lemon_movie_msg"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <View style="@style/lemon_line"/>
+
+    <View
+        style="@style/lemon_line"
+        android:layout_marginTop="21dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/lemon_white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="地址"
+            android:textColor="@color/lemon_camera_bg"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:id="@+id/lemon_personal_information_ed_address"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/lemon_white"
+            android:gravity="right"
+            android:maxLength="24"
+            android:textColor="@color/lemon_movie_msg"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <View style="@style/lemon_line"/>
+</LinearLayout>

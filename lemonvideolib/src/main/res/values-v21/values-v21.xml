@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/lemon_you_text_colorlu</item>
+        <!--工具栏样式样式-->
+        <item name="colorPrimaryDark">@color/lemon_top_bg</item>
+        <item name="colorControlNormal">@color/lemon_top_bg</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+    </style>
+    <style name="AppVideoStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/lemon_you_text_colorlu</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

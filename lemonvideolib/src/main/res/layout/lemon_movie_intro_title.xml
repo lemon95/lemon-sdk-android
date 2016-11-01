@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/lemon_movie_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/lemon_white">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/lemon_movie_name_tv"-->
+    <!--style="@style/lemon_sub_title"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:ellipsize="end"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="测试测试测试测试成都市测试测试测试测试测试" />-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/lemon_intro_arrow"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="@dimen/lemon_sub_title_margin_side"-->
+    <!--android:src="@drawable/lemon_down" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/lemon_error_feedback_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginRight="30dp"-->
+    <!--android:layout_toLeftOf="@id/lemon_intro_arrow"-->
+    <!--android:background="@drawable/lemon_blue_btn_bg"-->
+    <!--android:gravity="center"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:text="@string/lemon_error_feedback"-->
+    <!--android:textColor="@color/lemon_video_detail_comment_btn_color"-->
+    <!--android:textSize="13sp" />-->
+    <!--</RelativeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lemon_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lemon_movie_name_tv"
+            style="@style/lemon_sub_title"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+            android:id="@+id/lemon_intro_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/lemon_sub_title_margin_side"
+            android:src="@drawable/lemon_down" />
+
+            <Button
+            android:id="@+id/lemon_error_feedback_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/lemon_intro_arrow"
+            android:background="@drawable/lemon_blue_btn_bg"
+            android:gravity="center"
+            android:text="@string/lemon_error_feedback"
+            android:textColor="@color/lemon_video_detail_comment_btn_color"
+            android:textSize="13sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:background="@color/lemon_white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lemon_movie_score_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/lemon_sub_title_margin_side"
+            android:maxEms="2"
+            android:maxLines="1"
+            android:textColor="@color/lemon_orange"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/lemon_movie_type_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:singleLine="true"
+            android:textColor="@color/video_detail_intro_gray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/video_hot_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/lemon_main_dianjiliang"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/video_detail_intro_gray"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/video_intro_title_divider"
+        style="@style/lemon_horizen_line"
+        android:visibility="gone" />
+
+</LinearLayout>

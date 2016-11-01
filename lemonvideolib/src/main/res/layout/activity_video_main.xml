@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lemon_bg"
+    android:orientation="vertical"
+    tools:context=".movie.view.VideosMainActivity">
+
+    <include layout="@layout/lemon_common_top_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lemon_bg">
+
+        <include layout="@layout/lemon_content_view"></include>
+
+        <include layout="@layout/lemon_common_load"></include>
+
+        <LinearLayout
+            android:id="@+id/lemon_ll_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lemon_bg">
+
+            <com.lemon95.lemonvideolib.common.myview.gridview.PullToRefreshScrollView
+                android:id="@+id/pull_refresh_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lemon_bg"
+                android:scrollbars="none"
+                ptr:ptrAnimationStyle="rotate"
+                ptr:ptrHeaderTextColor="@color/lemon_type_color"
+                ptr:ptrMode="pullFromStart"
+                ptr:ptrRotateDrawableWhilePulling="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--搜索-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/lemon_search_content_movies_ll_editText_height"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/lemon_image_gap"
+                        android:paddingLeft="@dimen/lemon_more_item_top"
+                        android:paddingRight="@dimen/lemon_more_item_top"
+                        android:paddingTop="@dimen/lemon_image_gap">
+
+                        <TextView
+                            android:id="@+id/lemon_search"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/lemon_edittext_bg"
+                            android:drawableLeft="@drawable/lemon_main_sousuo"
+                            android:drawablePadding="8dp"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="8dp"
+                            android:text="@string/lemon_search_ed"
+                            android:textColor="@color/lemon_seach_tv" />
+
+                        <TextView
+                            android:id="@+id/video_all_tv"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/lemon_edittext_bg"
+                            android:gravity="center"
+                            android:text="@string/lemon_video_all"
+                            android:textColor="@color/lemon_seach_tv" />
+
+                    </LinearLayout>
+
+                    <!--banner部分-->
+                    <include layout="@layout/lemon_common_banner"></include>
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:background="@color/lemon_main_line" />-->
+
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/video_special_column_ll_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/lemon_main_line" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lemon_white"
+                            android:paddingBottom="@dimen/lemon_type_top">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <View style="@style/lemon_side_title_line" />
+
+                                <TextView
+                                    android:id="@+id/video_special_column_title_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/lemon_record_tv"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/video_special_column_more_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/lemon_more"
+                                    android:textColor="@color/lemon_movie_msg"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/lemon_iv_rig_more_size"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:layout_marginRight="@dimen/lemon_top_function_rig"
+                                    android:src="@drawable/lemon_gengduo" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/lemon_type_top"
+                            android:background="@color/lemon_white">
+
+                            <com.lemon95.lemonvideolib.common.myview.MyGridView
+                                android:id="@+id/gridview_special_column_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lemon_type_title_left"
+                                android:layout_marginRight="@dimen/lemon_type_title_left"
+                                android:horizontalSpacing="@dimen/lemon_image_gap"
+                                android:listSelector="@color/lemon_white"
+                                android:numColumns="3"
+                                android:verticalSpacing="@dimen/lemon_image_gap" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/lemon_main_line" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/video_special_column_ll_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/lemon_type_top"
+                            android:background="@color/lemon_main_line" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lemon_white"
+                            android:paddingBottom="@dimen/lemon_type_top">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <View style="@style/lemon_side_title_line" />
+
+                                <TextView
+                                    android:id="@+id/video_special_column_title_2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/lemon_record_tv"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/video_special_column_more_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/lemon_mores"
+                                    android:textColor="@color/lemon_movie_msg"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/lemon_iv_rig_more_size"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:layout_marginRight="@dimen/lemon_top_function_rig"
+                                    android:src="@drawable/lemon_gengduo" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/lemon_white">
+
+                            <com.lemon95.lemonvideolib.common.myview.MyGridView
+                                android:id="@+id/gridview_special_column_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lemon_type_title_left"
+                                android:layout_marginRight="@dimen/lemon_type_title_left"
+                                android:horizontalSpacing="@dimen/lemon_image_gap"
+                                android:listSelector="@color/lemon_white"
+                                android:numColumns="3"
+                                android:verticalSpacing="@dimen/lemon_image_gap" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/lemon_main_line"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/video_special_column_ll_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/lemon_type_top"
+                            android:background="@color/lemon_main_line"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lemon_white"
+                            android:paddingBottom="@dimen/lemon_type_top">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <View style="@style/lemon_side_title_line" />
+
+                                <TextView
+                                    android:id="@+id/video_special_column_title_3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/lemon_record_tv"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/video_special_column_more_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/lemon_mores"
+                                    android:textColor="@color/lemon_movie_msg"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/lemon_iv_rig_more_size"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:layout_marginRight="@dimen/lemon_top_function_rig"
+                                    android:src="@drawable/lemon_gengduo" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/lemon_white">
+
+                            <com.lemon95.lemonvideolib.common.myview.MyGridView
+                                android:id="@+id/gridview_special_column_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lemon_type_title_left"
+                                android:layout_marginRight="@dimen/lemon_type_title_left"
+                                android:horizontalSpacing="@dimen/lemon_image_gap"
+                                android:listSelector="@color/lemon_white"
+                                android:numColumns="3"
+                                android:verticalSpacing="@dimen/lemon_image_gap" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/lemon_main_line"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/video_special_column_ll_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="@dimen/lemon_type_top"
+                            android:background="@color/lemon_main_line"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lemon_white"
+                            android:paddingBottom="@dimen/lemon_type_top">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <View style="@style/lemon_side_title_line" />
+
+                                <TextView
+                                    android:id="@+id/video_special_column_title_4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:ellipsize="end"
+                                    android:singleLine="true"
+                                    android:textColor="@color/lemon_record_tv"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/video_special_column_more_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/lemon_type_top"
+                                android:paddingTop="@dimen/lemon_type_top">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/lemon_mores"
+                                    android:textColor="@color/lemon_movie_msg"
+                                    android:textSize="@dimen/lemon_type_text_size" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/lemon_iv_rig_more_size"
+                                    android:layout_marginLeft="@dimen/lemon_type_top"
+                                    android:layout_marginRight="@dimen/lemon_top_function_rig"
+                                    android:src="@drawable/lemon_gengduo" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/lemon_white">
+
+                            <com.lemon95.lemonvideolib.common.myview.MyGridView
+                                android:id="@+id/gridview_special_column_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/lemon_type_title_left"
+                                android:layout_marginRight="@dimen/lemon_type_title_left"
+                                android:horizontalSpacing="@dimen/lemon_image_gap"
+                                android:listSelector="@color/lemon_white"
+                                android:numColumns="3"
+                                android:verticalSpacing="@dimen/lemon_image_gap" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/lemon_main_line"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/lemon_type_top"
+                        android:background="@color/lemon_main_line"
+                        android:visibility="visible"></View>
+                </LinearLayout>
+
+            </com.lemon95.lemonvideolib.common.myview.gridview.PullToRefreshScrollView>
+
+        </LinearLayout>
+
+
+        <!--<include layout="@layout/lemon_common_action_but"/>-->
+    </RelativeLayout>
+
+
+</LinearLayout>

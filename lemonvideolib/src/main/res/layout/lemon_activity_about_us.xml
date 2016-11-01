@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/lemon_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/lemon_common_top_back"></include>
+
+    <ImageView
+        android:layout_width="@dimen/lemon_not_what_ll_tv_wight"
+        android:layout_height="@dimen/lemon_not_what_ll_tv_hight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/lemon_feedbock_size_Bottom"
+        android:layout_marginTop="@dimen/lemon_feedbock_size_Bt_top"
+        android:src="@drawable/lemon_about_us_log"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/lemon_activity_about_us_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/lemon_feedbock_size_tvext"
+        ></TextView>
+
+
+</LinearLayout>

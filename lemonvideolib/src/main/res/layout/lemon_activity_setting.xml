@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/lemon_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/lemon_common_top_back"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lemon_bg"
+            android:orientation="vertical">
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_share_ma_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_statement"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_share_shengming"
+                    android:text="@string/lemon_records_my_custom_shengming"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View style="@style/lemon_line"></View>
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_share_ma_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_agreement"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_share_shengming"
+                    android:text="@string/lemon_pay_xieyi"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View style="@style/lemon_line"></View>
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_share_ma_top"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_fookeed"
+                style="@style/lemon_record_rl_line">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_share_wenti"
+                    android:text="意见反馈"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View style="@style/lemon_line"></View>
+
+
+            <View
+                style="@style/lemon_line"
+                android:layout_marginTop="@dimen/lemon_share_ma_top"
+                android:visibility="visible"></View>
+
+            <RelativeLayout
+                android:id="@+id/lemon_watch_the_record_huancun"
+                style="@style/lemon_record_rl_line"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/lemon_watch_the_record_TextView"
+                    android:drawableLeft="@drawable/lemon_share_huancun"
+                    android:text="清理缓存"/>
+
+                <ImageView style="@style/lemon_watch_the_record_right"/>
+
+            </RelativeLayout>
+
+            <View style="@style/lemon_line"></View>
+
+            <!--<View-->
+                <!--style="@style/lemon_line"-->
+                <!--android:layout_marginTop="@dimen/lemon_share_ma_top"-->
+                <!--android:visibility="gone"></View>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lemon_watch_the_record_tongzhi"-->
+                <!--style="@style/lemon_record_rl_line"-->
+                <!--android:visibility="gone">-->
+
+                <!--<TextView-->
+                    <!--style="@style/lemon_watch_the_record_TextView"-->
+                    <!--android:drawableLeft="@drawable/lemon_share_wenti"-->
+                    <!--android:text="消息通知"/>-->
+
+                <!--<android.support.v7.widget.SwitchCompat-->
+                    <!--android:id="@+id/lemon_watch_wc"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:background="#00FFFFFF"-->
+                    <!--/>-->
+            <!--</RelativeLayout>-->
+
+            <!--<View style="@style/lemon_line"></View>-->
+
+            <!--<View-->
+                <!--style="@style/lemon_line"-->
+                <!--android:layout_marginTop="@dimen/lemon_share_ma_top"-->
+                <!--android:visibility="visible"></View>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lemon_watch_the_record_women"-->
+                <!--style="@style/lemon_record_rl_line"-->
+                <!--android:visibility="visible">-->
+
+                <!--<TextView-->
+                    <!--style="@style/lemon_watch_the_record_TextView"-->
+                    <!--android:drawableLeft="@drawable/lemon_share_kefu"-->
+                    <!--android:text="关于我们"/>-->
+
+                <!--<ImageView style="@style/lemon_watch_the_record_right"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<View style="@style/lemon_line"></View>-->
+
+            <!--<View-->
+                <!--style="@style/lemon_line"-->
+                <!--android:layout_marginTop="@dimen/lemon_share_ma_top"-->
+                <!--android:visibility="visible"></View>-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lemon_watch_the_record_gengxin"-->
+                <!--style="@style/lemon_record_rl_line"-->
+                <!--android:visibility="visible">-->
+
+                <!--<TextView-->
+                    <!--style="@style/lemon_watch_the_record_TextView"-->
+                    <!--android:drawableLeft="@drawable/lemon_share_gengxin"-->
+                    <!--android:text="检测更新"/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/lemon_im_gengxin"-->
+                    <!--style="@style/lemon_watch_the_record_right"/>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/lemon_tv_gengxin"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:layout_toLeftOf="@id/lemon_im_gengxin"-->
+                    <!--android:src="@drawable/lemon_tv_gengxin_tobiao"-->
+                    <!--/>-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<View style="@style/lemon_line"></View>-->
+
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/lemon_watch_the_record_tuichu"-->
+                <!--style="@style/lemon_record_rl_line"-->
+                <!--android:layout_marginTop="@dimen/lemon_share_ma_top"-->
+                <!--android:visibility="visible">-->
+
+                <!--<View-->
+                    <!--style="@style/lemon_line"-->
+                    <!--android:visibility="visible"></View>-->
+
+                <!--<TextView-->
+                    <!--style="@style/lemon_watch_the_record_TextView"-->
+                    <!--android:drawableLeft="@drawable/lemon_share_tuichu"-->
+                    <!--android:text="退出登录"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<View style="@style/lemon_line"></View>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
