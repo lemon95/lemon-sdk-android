@@ -27,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
                 String user = user_et.getText().toString().trim();
                 String password = password_et.getText().toString().trim();
                 Intent intent = new Intent(StartActivity.this, com.lemon95.lemonvideolib.MainActivity.class);
-                intent.putExtra("Mobile", user);  //手机号 [用户名]
+                intent.putExtra("Mobile", user);  //手机号
                 intent.putExtra("Password",password); //登录密码
                 startActivity(intent);
             }
