@@ -30,7 +30,7 @@ Android 4.0及以上版本
  intent.putExtra("Mobile", user);  //手机号码 [用户名]
  intent.putExtra("Password",password); //登录密码
  startActivity(intent);
-```java
+```
 ##用到的第三方包
 butterknife-7.0.1、国广手机电视starschina_player_sdk、友盟数据统计umeng-analytics-v6.0.1、video++、xutils3.3.32，如有冲突请自行取舍
              
