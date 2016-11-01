@@ -42,6 +42,7 @@
     <application
         android:allowBackup="true"
         android:supportsRtl="true" >
+
         <meta-data android:name="LEMON_APPKEY" android:value="应用key" />
         <meta-data android:name="UMENG_CHANNEL" android:value="渠道key" />
         <meta-data android:name="LEMON_PLAYKEY" android:value="4JRKyMthe" />
@@ -161,15 +162,7 @@
         <activity
             android:name="com.lemon95.lemonvideolib.customization.view.MyCustomRecordActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="com.lemon95.lemonvideolib.pay.view.PayFilmActivity"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="PAY_ACTION" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <activity
             android:name="com.lemon95.lemonvideolib.special.view.SpecialActivity"
             android:screenOrientation="portrait" >
