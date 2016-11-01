@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.lemon95.lemonvideolib.MainActivity;
-
 public class StartActivity extends AppCompatActivity {
 
     private Button start_but;
@@ -29,7 +27,7 @@ public class StartActivity extends AppCompatActivity {
                 String user = user_et.getText().toString().trim();
                 String password = password_et.getText().toString().trim();
                 Intent intent = new Intent(StartActivity.this, com.lemon95.lemonvideolib.MainActivity.class);
-                intent.putExtra("Mobile", user);  //手机号码 [用户登录信息]
+                intent.putExtra("Mobile", user);  //手机号码 [用户名]
                 intent.putExtra("Password",password); //登录密码
                 startActivity(intent);
             }
